@@ -21,4 +21,4 @@ To run the Temperature Converter locally, follow these steps:
 ### Installation
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/temperature-converter.git
+   git clone https://github.com/sonhak-18/Mini-Coding-Project_RevoU
