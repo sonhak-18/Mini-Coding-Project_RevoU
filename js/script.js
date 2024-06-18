@@ -7,6 +7,7 @@ function convertToFahrenheit() {
     let fahrenheit = (celsius * 9/5) + 32;
     document.getElementById("fahrenheit").value = fahrenheit.toFixed(2);
     document.getElementById("result").innerHTML = `${celsius}°C is equal to ${fahrenheit.toFixed(2)}°F`;
+    document.getElementById("calculation-box").innerHTML = `Calculation: (${celsius} × 9/5) + 32 = ${fahrenheit.toFixed(2)}`;
 }
 
 function convertToCelsius() {
@@ -18,28 +19,11 @@ function convertToCelsius() {
     let celsius = (fahrenheit - 32) * 5/9;
     document.getElementById("celsius").value = celsius.toFixed(2);
     document.getElementById("result").innerHTML = `${fahrenheit}°F is equal to ${celsius.toFixed(2)}°C`;
+    document.getElementById("calculation-box").innerHTML = `Calculation: (${fahrenheit} - 32) × 5/9 = ${celsius.toFixed(2)}`;
 }
 
 function resetForm() {
     document.getElementById("converter-form").reset();
     document.getElementById("result").innerHTML = "";
+    document.getElementById("calculation-box").innerHTML = "";
 }
-
-function openTab(tabName) {
-    var i, tabcontent, tabbuttons;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tabbuttons = document.getElementsByClassName("tab-button");
-    for (i = 0; i < tabbuttons.length; i++) {
-        tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    event.currentTarget.className += " active";
-}
-
-// Default open tab
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("tab1").style.display = "block";
-});

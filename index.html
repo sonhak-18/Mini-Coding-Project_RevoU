@@ -5,27 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Converter</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="tabs">
-            <button class="tab-button active" onclick="openTab('tab1')">Converter</button>
-        </div>
-        <div id="tab1" class="tab-content">
-            <h1>Temperature Converter</h1>
-            <form id="converter-form">
-                <label for="celsius">Celsius (°C):</label>
-                <input type="number" id="celsius" name="celsius" placeholder="Enter Celsius">
-                
-                <label for="fahrenheit">Fahrenheit (°F):</label>
-                <input type="number" id="fahrenheit" name="fahrenheit" placeholder="Enter Fahrenheit">
-                
-                <button type="button" class="button primary" onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
-                <button type="button" class="button primary" onclick="convertToCelsius()">Convert to Celsius</button>
-                <button type="button" class="button secondary" onclick="resetForm()">Reset</button>
-            </form>
-            <div id="result"></div>
-        </div>
+        <h1>Temperature Converter</h1>
+        <form id="converter-form">
+            <label for="celsius"><i class="fas fa-thermometer-half"></i> Celsius (°C):</label>
+            <input type="number" id="celsius" name="celsius" placeholder="Enter Celsius">
+            
+            <label for="fahrenheit"><i class="fas fa-thermometer-three-quarters"></i> Fahrenheit (°F):</label>
+            <input type="number" id="fahrenheit" name="fahrenheit" placeholder="Enter Fahrenheit">
+            
+            <button type="button" class="button primary" onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+            <button type="button" class="button primary" onclick="convertToCelsius()">Convert to Celsius</button>
+            <button type="button" class="button secondary" onclick="resetForm()">Reset</button>
+        </form>
+        <div id="result"></div>
+        <div id="calculation-box"></div>
         <div class="formula-container">
             <h2>Conversion Formulas</h2>
             <div class="formula" id="formula-c-to-f">
